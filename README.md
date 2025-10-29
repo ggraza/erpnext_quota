@@ -4,7 +4,7 @@ App to manage ERPNext User, Company and Space limitations
 
 #### How to Install
 ```
-bench get-app https://github.com/ahmadpak/erpnext_quota
+bench get-app branch version-14 https://github.com/ggraza/erpnext_quota
 bench --site *site_name* install-app erpnext_quota
 ```
 ### Usage
