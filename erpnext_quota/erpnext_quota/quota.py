@@ -61,7 +61,7 @@ def validate_users(self, count_administrator_user, count_website_users, allowed_
     # Users limit validation
     if allowed_users != 0 and active_users >= allowed_users:
         if not frappe.get_all('User', filters={'name': self.name}):
-            frappe.throw('Only {} active {} users allowed and you have {} active users. Please disable users or to increase the limit please contact sales'. format(allowed_users, is_desk, active_users))
+            frappe.throw('Only {} active {} users allowed and you have {} active users. Please disable users or to increase the limit please contact Sales@g2virtu.com +92 339 4284788'. format(allowed_users, is_desk, active_users))
 
     return active_users
 
@@ -107,7 +107,7 @@ def validate_files_space_limit():
 
     if allowed_space != 0 and total_size > allowed_space:
         msg = '''
-        <div>You have exceeded your files space limit. Delete some files from file manager or to increase the limit please contact sales</div>
+        <div>You have exceeded your files space limit. Delete some files from file manager or to increase the limit please contact Sales@g2virtu.com +92 339 4284788</div>
         <div><ul><li>Private Files: {}MB</li><li>Public Files: {}MB</li><li>Backup Files: {}MB</li></ul></div>
         '''.format(private_files_size, public_files_size, backup_files_size)
 
@@ -142,7 +142,7 @@ def validate_db_space_limit():
 
     if allowed_db_space != 0 and used_db_space > allowed_db_space:
         msg = '''
-        <div>You have exceeded your Database Size limit. Please contact sales to upgrade your package</div>
+        <div>You have exceeded your Database Size limit. Please contact Sales@g2virtu.com +92 339 4284788 to upgrade your package</div>
         <ul><li>Allowed Space: {}MB</li><li>Used Space: {}MB</li></ul>
         '''.format(allowed_db_space, used_db_space)
         frappe.throw(_(msg))
@@ -171,7 +171,7 @@ def company_limit(self, method):
     # Validation
     if allowed_companies != 0 and total_company >= allowed_companies:
         if not frappe.get_all('Company', {'name': self.name}):
-            frappe.throw(_("Only {} company(s) allowed and you have {} company(s).Please remove other company or to increase the limit please contact sales").format(quota.get('company'), total_company))
+            frappe.throw(_("Only {} company(s) allowed and you have {} company(s).Please remove other company or to increase the limit please contact Sales@g2virtu.com +92 339 4284788").format(quota.get('company'), total_company))
 
 
 # Directory Size
