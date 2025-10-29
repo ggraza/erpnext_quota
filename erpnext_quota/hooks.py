@@ -2,9 +2,9 @@
 from __future__ import unicode_literals
 
 app_name = "erpnext_quota"
-app_title = "Erpnext Quota"
+app_title = "ERP Quota"
 app_publisher = "Havenir Solutions Private Limited"
-app_description = "App to manage ERPNext User and Space limitations"
+app_description = "App to manage ERP User and Space limitations"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "info@havenir.com"
